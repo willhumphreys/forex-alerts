@@ -2,9 +2,8 @@ package uk.co.threebugs;
 
 import com.google.common.base.MoreObjects;
 
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
+import java.io.Serializable;
 
 @XmlRootElement(name = "Rate")
 public class Rate {
@@ -25,6 +24,14 @@ public class Rate {
         return symbol;
     }
 
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
+
+    public void setBid(double bid) {
+        this.bid = bid;
+    }
+
     @XmlElement(name = "Bid")
     public double getBid() {
         return bid;
@@ -35,9 +42,17 @@ public class Rate {
         return ask;
     }
 
+    public void setAsk(double ask) {
+        this.ask = ask;
+    }
+
     @XmlElement(name = "High")
     public double getHigh() {
         return high;
+    }
+
+    public void setHigh(double high) {
+        this.high = high;
     }
 
     @XmlElement(name = "Low")
@@ -45,14 +60,26 @@ public class Rate {
         return low;
     }
 
+    public void setLow(double low) {
+        this.low = low;
+    }
+
     @XmlElement(name = "Direction")
     public int getDirection() {
         return direction;
     }
 
+    public void setDirection(int direction) {
+        this.direction = direction;
+    }
+
     @XmlElement(name = "Last")
     public String getLast() {
         return last;
+    }
+
+    public void setLast(String last) {
+        this.last = last;
     }
 
     @Override
