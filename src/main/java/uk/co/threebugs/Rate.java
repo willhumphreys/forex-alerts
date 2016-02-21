@@ -2,8 +2,9 @@ package uk.co.threebugs;
 
 import com.google.common.base.MoreObjects;
 
-import javax.xml.bind.annotation.*;
-import java.io.Serializable;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "Rate")
 public class Rate {
