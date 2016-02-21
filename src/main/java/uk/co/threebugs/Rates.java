@@ -4,7 +4,6 @@ import com.google.common.base.MoreObjects;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.io.Serializable;
 import java.util.List;
 
 @XmlRootElement(name = "Rates")
