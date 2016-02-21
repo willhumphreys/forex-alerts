@@ -15,21 +15,15 @@ public class ForexAlertsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ForexAlertsApplication.class, args);
-
         try {
-
             File file = new File("RatesXML.xml");
             JAXBContext jaxbContext = JAXBContext.newInstance(Rates.class);
-
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-            Rates customer = (Rates) jaxbUnmarshaller.unmarshal(file);
-            System.out.println(customer);
+            Rates rates = (Rates) jaxbUnmarshaller.unmarshal(file);
+            System.out.println(rates);
 
         } catch (JAXBException e) {
             e.printStackTrace();
         }
-
     }
-
-
 }
