@@ -2,12 +2,11 @@ package uk.co.threebugs;
 
 import com.google.common.base.MoreObjects;
 
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
+import java.io.Serializable;
 
 @XmlRootElement(name = "Rate")
-public class Rate {
+public class Rate implements Serializable {
 
     @XmlAttribute(name = "Symbol")
     private String symbol;
@@ -30,14 +29,35 @@ public class Rate {
     @XmlElement(name = "Last")
     private String last;
 
-    public Rate(String symbol, double bid, double ask, double high, double low, int direction, String last) {
-        this.symbol = symbol;
-        this.bid = bid;
-        this.ask = ask;
-        this.high = high;
-        this.low = low;
-        this.direction = direction;
-        this.last = last;
+    public Rate() {
+    }
+
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public double getBid() {
+        return bid;
+    }
+
+    public double getAsk() {
+        return ask;
+    }
+
+    public double getHigh() {
+        return high;
+    }
+
+    public double getLow() {
+        return low;
+    }
+
+    public int getDirection() {
+        return direction;
+    }
+
+    public String getLast() {
+        return last;
     }
 
     @Override
