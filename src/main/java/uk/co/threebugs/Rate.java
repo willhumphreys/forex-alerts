@@ -9,54 +9,48 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "Rate")
 public class Rate {
 
-    @XmlAttribute(name = "Symbol")
     private String symbol;
-
-    @XmlElement(name = "Bid")
     private double bid;
-
-    @XmlElement(name = "Ask")
     private double ask;
-
-    @XmlElement(name = "High")
     private double high;
-
-    @XmlElement(name = "Low")
     private double low;
-
-    @XmlElement(name = "Direction")
     private int direction;
-
-    @XmlElement(name = "Last")
     private String last;
 
     public Rate() {
     }
 
+    @XmlAttribute(name = "Symbol")
     public String getSymbol() {
         return symbol;
     }
 
+    @XmlElement(name = "Bid")
     public double getBid() {
         return bid;
     }
 
+    @XmlElement(name = "Ask")
     public double getAsk() {
         return ask;
     }
 
+    @XmlElement(name = "High")
     public double getHigh() {
         return high;
     }
 
+    @XmlElement(name = "Low")
     public double getLow() {
         return low;
     }
 
+    @XmlElement(name = "Direction")
     public int getDirection() {
         return direction;
     }
 
+    @XmlElement(name = "Last")
     public String getLast() {
         return last;
     }
